@@ -68,7 +68,6 @@
 	});
 
 	io.on('listen-room', (eventBody) => {
-		console.log(messages)
 		if (Object.hasOwn(messages, currentRoom)) {
 			messages[currentRoom].push(eventBody);
 			messages[currentRoom] = messages[currentRoom];
