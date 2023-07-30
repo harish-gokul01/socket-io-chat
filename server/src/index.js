@@ -74,8 +74,9 @@ io.on("connection", (socket) => {
     });
   });
 
-  socket.on("send-message",(eventBody)=>{
+  socket.on("send-message",(eventBody)=> {
     const { to , userName , payload , type } = eventBody;
+    console.log(to,userName,payload,type)
     let reciever = to
     if(type === "non_channel"){
         reciever = userHandler.getUser(to)
